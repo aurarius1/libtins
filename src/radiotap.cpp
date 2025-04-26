@@ -70,13 +70,13 @@ void add_integral_option(RadioTap& radio, RadioTap::PresentFlags type, T value) 
 }
 
 RadioTap::RadioTap()
-: header_(), options_payload_(4) {
-    channel(Utils::channel_to_mhz(1), 0xa0);
+: header_() {
+    /*channel(Utils::channel_to_mhz(1), 0xa0);
     flags(FCS);
     tsft(0);
     dbm_signal(-50);
     rx_flags(0);
-    antenna(0);
+    antenna(0);*/
 }
 
 RadioTap::RadioTap(const uint8_t* buffer, uint32_t total_sz) {
